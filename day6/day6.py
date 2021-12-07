@@ -1,7 +1,6 @@
 with open("day6/day6.in.txt") as input:
         p =  [int(p) for p in [(line.split(',')) for line in input][0]]
         population = {x:p.count(x) for x in p}
-print(population)
 DAYS = 256
 currentday = 0
 while currentday < DAYS:
@@ -14,5 +13,5 @@ while currentday < DAYS:
             new_population[state-1] += amount
     population = new_population
     currentday+=1
-    print('After {} day{}: {}'.format(currentday, 's' if currentday > 1 else '',new_population))
-print(sum(population.values()))
+    print(sum(population.values()))
+    #print('After {} day{}: {}'.format(currentday, 's' if currentday > 1 else '',new_population))
